@@ -164,7 +164,7 @@ function receivedMessage(event) {
 
 	if (messageText) {
 		console.log('event', event)
-		sendTextMessage(senderID, event.text)
+		sendTextMessage(senderID, `Bot: ${messageText}`)
 		//send message to api.ai
 		// sendToDialogFlow(senderID, messageText)
 	} else if (messageAttachments) {
