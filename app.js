@@ -167,7 +167,11 @@ function receivedMessage(event) {
 	if (messageText) {
 		console.log('event', event)
 		sendTypingOn(senderID)
-		sendTextMessage(senderID, `Bot: ${messageText}`)
+
+		setTimeout(() => {
+			sendTypingOff(senderID)
+			sendTextMessage(senderID, `Bot: ${messageText}`)
+		}, 2000)
 		//send message to api.ai
 		// sendToDialogFlow(senderID, messageText)
 	} else if (messageAttachments) {
