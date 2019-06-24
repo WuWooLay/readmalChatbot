@@ -16,18 +16,18 @@ if (!config.FB_PAGE_TOKEN) {
 if (!config.FB_VERIFY_TOKEN) {
 	throw new Error('missing FB_VERIFY_TOKEN')
 }
-if (!config.GOOGLE_PROJECT_ID) {
-	throw new Error('missing GOOGLE_PROJECT_ID')
-}
-if (!config.DF_LANGUAGE_CODE) {
-	throw new Error('missing DF_LANGUAGE_CODE')
-}
-if (!config.GOOGLE_CLIENT_EMAIL) {
-	throw new Error('missing GOOGLE_CLIENT_EMAIL')
-}
-if (!config.GOOGLE_PRIVATE_KEY) {
-	throw new Error('missing GOOGLE_PRIVATE_KEY')
-}
+// if (!config.GOOGLE_PROJECT_ID) {
+// 	throw new Error('missing GOOGLE_PROJECT_ID')
+// }
+// if (!config.DF_LANGUAGE_CODE) {
+// 	throw new Error('missing DF_LANGUAGE_CODE')
+// }
+// if (!config.GOOGLE_CLIENT_EMAIL) {
+// 	throw new Error('missing GOOGLE_CLIENT_EMAIL')
+// }
+// if (!config.GOOGLE_PRIVATE_KEY) {
+// 	throw new Error('missing GOOGLE_PRIVATE_KEY')
+// }
 if (!config.FB_APP_SECRET) {
 	throw new Error('missing FB_APP_SECRET')
 }
@@ -77,7 +77,7 @@ app.get('/', function(req, res) {
 
 // for Facebook verification
 app.get('/webhook/', function(req, res) {
-	console.log('request')
+	console.log('request to Webhook')
 	if (req.query['hub.mode'] === 'subscribe' && req.query['hub.verify_token'] === config.FB_VERIFY_TOKEN) {
 		res.status(200).send(req.query['hub.challenge'])
 	} else {

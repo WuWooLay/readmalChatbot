@@ -1,10 +1,11 @@
 module.exports = {
-    FB_PAGE_TOKEN: '',
-    FB_VERIFY_TOKEN: '',
-    FB_APP_SECRET: '',
-    SERVER_URL: '',
-    GOOGLE_PROJECT_ID: '',
-    DF_LANGUAGE_CODE: '',
-    GOOGLE_CLIENT_EMAIL: '',
-    GOOGLE_PRIVATE_KEY: ''
-};
+	FB_PAGE_TOKEN:
+		'EAAMKDppPDJ0BAHovpZCuFqpA4PYRGZBJKwnZBQW58dE7ZCJE2OEx6Vfh72SniZBVg9HeCeINxr6RdhU7Wq9iaMo0gEW9v56TRZCdzWSv1Sfdn3Mtum4ZBZAIykbDgRBxqlpZAtw4wEQYpFCruLo91NrRZAG9mSXLVsZCJtou981LfwwEwZDZD',
+	FB_VERIFY_TOKEN: 'readmal_is_everything',
+	FB_APP_SECRET: '9ff3712340dcbca0f3538aafb60cf58a',
+	SERVER_URL: 'https://readmalchatbot.herokuapp.com/',
+	GOOGLE_PROJECT_ID: '',
+	DF_LANGUAGE_CODE: '',
+	GOOGLE_CLIENT_EMAIL: '',
+	GOOGLE_PRIVATE_KEY: ''
+}
