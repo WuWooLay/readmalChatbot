@@ -108,10 +108,8 @@ app.post('/webhook/', function(req, res) {
 			// Iterate over each messaging event
 			pageEntry.messaging.forEach(function(messagingEvent) {
 				if (messagingEvent.optin) {
-					// If Authentication
 					receivedAuthentication(messagingEvent)
 				} else if (messagingEvent.message) {
-					// If Message
 					receivedMessage(messagingEvent)
 				} else if (messagingEvent.delivery) {
 					receivedDeliveryConfirmation(messagingEvent)
@@ -165,9 +163,17 @@ function receivedMessage(event) {
 	}
 
 	if (messageText) {
-		console.log('event', event)
+		sendTypingOn(senderId)
 
-		sendTextMessage(senderID, `Bot: ${messageText}`)
+		setTimeout(() => {
+			sendTypingOff(senderId)
+		}, 500)
+
+		setTimeout(() => {
+			console.log('event', event)
+			sendTextMessage(senderID, `Bot: ${messageText}`)
+		}, 1000)
+
 		//send message to api.ai
 		// sendToDialogFlow(senderID, messageText)
 	} else if (messageAttachments) {
