@@ -163,8 +163,10 @@ function receivedMessage(event) {
 	}
 
 	if (messageText) {
+		console.log('event', event)
+		sendTextMessage(senderID, "I'm not sure what you want. Can you be more specific?")
 		//send message to api.ai
-		sendToDialogFlow(senderID, messageText)
+		// sendToDialogFlow(senderID, messageText)
 	} else if (messageAttachments) {
 		handleMessageAttachments(messageAttachments, senderID)
 	}
