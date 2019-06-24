@@ -166,7 +166,7 @@ function receivedMessage(event) {
 
 	if (messageText) {
 		console.log('event', event)
-		sendTypingOn(sender)
+		sendTypingOn(senderID)
 		sendTextMessage(senderID, `Bot: ${messageText}`)
 		//send message to api.ai
 		// sendToDialogFlow(senderID, messageText)
